@@ -13,11 +13,10 @@ import json
 
 
 def post_code():
-    user_post_code = input("Please enter your postcode")
-    post_api_response = requests.get(f"https://postcodes.io/postcodes/{user_post_code}")
+    user_post_code = input("Please enter your postcode\n")
+    post_api_response = requests.get(f"https://postcodes.io/postcodes/{user_post_code.lower()}")
     if post_api_response.status_code == 200:
-        print(post_api_response.content)
-
+        print(json.dumps(post_api_response.json(), indent=1))
 
 
 post_code()
