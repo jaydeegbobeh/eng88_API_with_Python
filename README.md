@@ -19,7 +19,7 @@ if post_api_response.status_code == 200:
 else:
     print("Sorry the postcode is incorrect please enter the correct postcode")
 ```
-This code checks if a postcode is a valid UK postcode, if it is it returns the code 200 and gives information such as latitude.
+This code checks if a postcode is a valid UK postcode, if it is it returns the code 200 and gives information such as latitude and longitude of the input postcode.
 ```
 import requests
 import json
